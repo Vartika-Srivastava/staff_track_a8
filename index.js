@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname,'public')))
 //     res.send("connected");
 // })
 
-app.get('/home',async (req,res)=>{
+app.get('/',async (req,res)=>{
     const user = await User.find({});
     res.render('index',{user});
 })
