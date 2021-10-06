@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office data</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+    <!-- <a href="/home/enter"><button id="enter">Enter Employee</button></a> -->
+    <section>
+        <a href="/home/enter"><button id="enter">Enter Employee</button></a>
+        <h2 style="text-align: center; text-decoration: underline;">Employees Data</h2>
+        
+        <ul>
+            <% for(let u of user){ %>
+                <li>
+                    <p><strong>Name: </strong><%= u.name %></p>
+                    <p><strong>ID: </strong><%= u.id %></p>
+                    <p><strong>Email ID: </strong><%= u.email %></p>
+                    <p><strong>Phone Number: </strong><%= u.phone %></p>
+                    <p>
+                        <strong>Check In Time:</strong>
+                        <% if(u.cinh<=9){ %> <%= 0 %> <% } %> <%= u.cinh %>:<% if(u.cinm<=9){ %> <%= 0 %> <% } %> <%= u.cinm %>
+                    </p>
+                    <p><strong>Is in the Office: </strong><%= u.inOffice %></p>
+
+                    <% if(u.inOffice === "true"){ %>
+                        <a href="/home/<%= u.id %>"><button id="exit">Exit the building</button></a>
+                    <% }else{ %>
+                        <p>
+                            <strong>Check Out Time:</strong>
+                            <% if(u.couth<=9){ %> <%= 0 %> <% } %> <%= u.couth %>:<% if(u.coutm<=9){ %> <%= 0 %> <% } %> <%= u.coutm %>
+                        </p>
+                    <% } %>
+                    <form action="home/<%= u.id %>?_method=DELETE" method="POST">
+                        <td colspan="2"><button id="delete" type="submit">Delete Entry</button></td>
+                    </form>
+                </li>
+            <% } %>
+        </ul>
+    </section>
+
+
+</body>
+</html>

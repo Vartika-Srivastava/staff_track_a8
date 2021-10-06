@@ -1,0 +1,46 @@
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+section{
+    background-color:#f2f3ca;
+    border:2px solid black;
+    margin:24vh auto;
+    width:70vw;
+    height: 50vh;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+form{
+    height: 70%;
+    width: 70%;
+    margin: 10vh auto;
+}
+input{
+    height: 3vh;
+    width: 6vw;
+    margin: 15px 10px;
+    /* margin-top: 20px; */
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px gray;
+}
+button{
+    height: 6vh;
+    width: 7vw;
+    font-size: 1.2em;
+    background-color: #881478;
+    border: purple;
+    border-radius: 5px;
+    color: white;
+}
+button:hover{
+    background-color: #b672ad;
+    color: black;
+    box-shadow: purple 0px 15px 15px -15px;
+    transition: opacity 0.3s ease-in-out;
+    transform: translateY(-4px);
+}

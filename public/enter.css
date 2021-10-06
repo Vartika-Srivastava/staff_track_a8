@@ -1,0 +1,37 @@
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+section{
+    background-color:#f2f3ca;
+    border:2px solid black;
+    margin:24vh auto;
+    width:70vw;
+    height: 48vh;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+label{
+    margin: 10px;
+}
+input{
+    height: 3vh;
+}
+button{
+    height: 6vh;
+    width: 10vw;
+    font-size: 1.2em;
+    background-color: #3c7a89;
+    border-radius: 5px;
+    color: white;
+    margin: 10px;
+}
+button:hover{
+    background-color: #8fc5d1;
+    color: black;
+    box-shadow: black 0px 15px 15px -15px;
+    transition: opacity 0.3s ease-in-out;
+    transform: translateY(-4px);
+}

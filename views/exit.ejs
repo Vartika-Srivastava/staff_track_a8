@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/exit.css">
+</head>
+<body>
+    <section>
+        <form action="/home/<%=u.id%>?_method=PUT" method="POST">
+            <fieldset>
+                <legend>Check Out</legend>
+                <label>Enter check out time(in 24 hrs format)</label><br>
+                <input type="number" name="couth" id="couth" min="0" max="23" placeholder="hour" required>
+                <input type="number" name="coutm" id="coutm" min="0" max="59" placeholder="minutes" required><br><br>
+                <button type="submit">Exit</button>
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>
