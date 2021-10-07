@@ -36,11 +36,11 @@ app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname,'public')))
 
-// app.get('/',(req,res)=>{
-//     res.send("connected");
-// })
+app.get('/',(req,res)=>{
+    res.redirect('/home');
+})
 
-app.get('/',async (req,res)=>{
+app.get('/home',async (req,res)=>{
     const user = await User.find({});
     res.render('index',{user});
 })
