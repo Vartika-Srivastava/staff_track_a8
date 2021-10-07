@@ -158,12 +158,3 @@ function sendExit(email,couth,coutm,phone){
 app.listen(process.env.PORT || 2323,(req,res)=>{
     console.log("UP AT 2323");
 })
-
-
-
-
-
-
-
-// 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
-// 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
